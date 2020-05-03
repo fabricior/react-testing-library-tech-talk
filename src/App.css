@@ -3,12 +3,6 @@
   align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 15vh;
@@ -30,24 +24,6 @@
   color: grey;
 }
 
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.highlighted {
-  background-color: skyblue;
-}
-
 input, textarea, button {
   font-family: inherit;
   font-size: 100%;  
@@ -55,7 +31,16 @@ input, textarea, button {
   margin: 3px;  
 }
 
+.displayed-message {
+  background-color: ivory;  
+}
+
 .new-message-section {
   background-color: azure;  
   padding: 20px;  
+}
+
+.reaction-selection {
+  background-color: cornsilk; 
+  border: dashed red;
 }

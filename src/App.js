@@ -1,4 +1,5 @@
 import React from 'react';
+import MessageEditor from "./messageEditor/MessageEditor";
 
 import './App.css';
 
@@ -9,6 +10,7 @@ function App() {
         React Testing Library Hands On
       </header>        
       <section className="App-section, new-message-section">        
+        <MessageEditor />
       </section>
     </div>
   );
