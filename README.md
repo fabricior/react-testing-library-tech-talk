@@ -1,14 +1,23 @@
-# How to use this repo
+# React Testing Library Tech Talk
 
-## Alternative 1: Open it in codesandbox.io
+## About
 
-- Step 1: Click on this badge:
+Repo to follow along with React Testing Library Tech Talk.
+Set up with <https://github.com/facebook/create-react-app>
+
+## How to use this repo
+
+### Alternative 1: Open it in codesandbox.io
+
+- Step 1: Click on badge below
 
     [![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?style=flat-square&logo=codesandbox)](https://githubbox.com/fabricior/react-testing-library-tech-talk)
 
 - Step 2: There is no step 2.
 
-## Alternative 2: Run it locally
+### Alternative 2: Run it locally
+
+**Requires**: Node.js and Visual Studio Code (or similar IDE)
 
 - Step 1: Clone the repo.
 
