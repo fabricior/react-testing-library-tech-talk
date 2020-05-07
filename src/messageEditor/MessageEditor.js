@@ -55,10 +55,11 @@ const MessageEditor = () => {
             />
             <MessageInputBox
                 onSubmit={handleNewMessageSubmit}
-            />          
-            <div>
+            />                      
+            <section aria-labelledby="stats-header">
+                <h3 id="stats-header">Stats</h3>
                 <p>There are {messages.length} message(s) in current chat.</p>
-            </div>
+            </section>
         </>
     );
 }
