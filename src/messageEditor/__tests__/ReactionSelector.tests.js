@@ -1,31 +1,31 @@
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, screen } from "@testing-library/react";
 import ReactionSelector from "../ReactionSelector";
 
 test("can see reaction list", () => {
-  const { getByRole, getByTitle } = render(<ReactionSelector onSelectReaction={() => { }} />);  
+  render(<ReactionSelector onSelectReaction={() => { }} />);  
 
-  const addReactionButton = getByRole('button');
+  const addReactionButton = screen.getByRole('button');
 
   fireEvent.click(addReactionButton);
 
-  expect(getByTitle(/dog face/i)).toBeInTheDocument();
+  expect(screen.getByTitle(/dog face/i)).toBeInTheDocument();
 })
 
 test.skip("reaction list is hidden by default", () => {
-  const { queryByTitle } = render(<ReactionSelector onSelectReaction={() => { }} />);  
+  render(<ReactionSelector onSelectReaction={() => { }} />);  
 
   // 💡 queries that start with "queryBy" return null if there is no match  
 })
 
 test.skip("can tab into a reactions", () => {
-  const { getByRole, getByTitle } = render(<ReactionSelector onSelectReaction={() => { }} />);
+  render(<ReactionSelector onSelectReaction={() => { }} />);
 
-  const addReactionButton = getByRole('button');
+  const addReactionButton = screen.getByRole('button');
 
   fireEvent.click(addReactionButton);
 
-  const grinningFaceButton = getByTitle(/grinning face/i)
+  const grinningFaceButton = screen.getByTitle(/grinning face/i)
 
   expect(grinningFaceButton).not.toHaveFocus();
 

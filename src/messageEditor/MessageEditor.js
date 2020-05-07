@@ -47,15 +47,15 @@ const MessageEditor = () => {
 
     return (
         <>
-            <MessageInputBox
-                onSubmit={handleNewMessageSubmit}
-            />
             <MessageList
                 messages={messages}
                 onDelete={handleDeleteMessage}
                 onAddReactionToMessage={handleAddReaction}
                 onDeleteReaction={handleDeleteReaction}
             />
+            <MessageInputBox
+                onSubmit={handleNewMessageSubmit}
+            />          
             <div>
                 <p>There are {messages.length} message(s) in current chat.</p>
             </div>
