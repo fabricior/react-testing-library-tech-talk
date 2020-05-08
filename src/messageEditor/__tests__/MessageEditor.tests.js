@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import user from "@testing-library/user-event";
 import MessageEditor from "../MessageEditor";
 
-test.skip("can submit a new message", () => {
+test("can submit a new message", () => {
     render(<MessageEditor />)
     const input = screen.getByLabelText(/message:/i);
 
@@ -31,9 +31,10 @@ test.skip("new messages are diplayed on the list and status message is updated",
     expect(screen.getByText(/this is a second message/i)).toBeInTheDocument();
 
     const infoMessage = screen.getByText(/there are 2 message(s) in current chat./i); // ❌ this will fail.    
+    expect(infoMessage).toBeInTheDocument();
 });
 
-test.skip("focused items and tab order works as expected", () => {
+test("focused items and tab order works as expected", () => {
     render(<MessageEditor />)
 
     user.tab();

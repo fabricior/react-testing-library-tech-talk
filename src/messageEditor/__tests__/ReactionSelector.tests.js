@@ -15,7 +15,7 @@ test("can see reaction list", () => {
 test.skip("reaction list is hidden by default", () => {
   render(<ReactionSelector onSelectReaction={() => { }} />);  
 
-  // 💡 queries that start with "queryBy" return null if there is no match  
+  // 💡 "queryBy" can help
 })
 
 test.skip("can tab into a reactions", () => {
