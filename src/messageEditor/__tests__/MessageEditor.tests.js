@@ -16,7 +16,7 @@ test("can submit a new message", () => {
     expect(submitMessageButton).toBeEnabled();
 });
 
-test.skip("new messages are diplayed on the list and status message is updated", () => {
+test("new messages are diplayed on the list and status message is updated", () => {
     render(<MessageEditor />)
     const input = screen.getByLabelText(/message:/i);
 
@@ -30,8 +30,8 @@ test.skip("new messages are diplayed on the list and status message is updated",
     user.click(submitMessageButton);
     expect(screen.getByText(/this is a second message/i)).toBeInTheDocument();
 
-    const infoMessage = screen.getByText(/there are 2 message(s) in current chat./i); // ❌ this will fail.    
-    expect(infoMessage).toBeInTheDocument();
+    const infoMessage = screen.getByRole('region', { name: 'Stats' } );    
+    expect(infoMessage).toHaveTextContent('There are 2 message(s) in current chat.');
 });
 
 test("focused items and tab order works as expected", () => {
